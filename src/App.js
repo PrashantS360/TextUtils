@@ -1,24 +1,8 @@
-// import logo from './logo.svg';
 import './App.css';
-// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
-
-// Understanding JSX
-/*
-replace
-  class ---> className
-  for -----> htmlFor
-*/
-
-// let name = "Sachin";
 
 function App() {
 
@@ -61,12 +45,6 @@ function App() {
       showAlert('Dark mode has been enabled', 'success');
       document.title = "TextUtils - Dark Mode";
 
-      // setInterval(() => {
-      //   document.title = "TextUtils is Amazing";
-      // }, 2000);
-      // setInterval(() => {
-      //   document.title = "Install TextUtils Now!";
-      // }, 1500);
     }
     else {
       setMode('light');
@@ -79,49 +57,13 @@ function App() {
 
 
 
-  return ( // JSX
-    // we can return only one tag (we can use JSX fragment <>Write your code here</>)
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React With CodeWithHarry
-    //     </a>
-    //   </header>
-    // </div>
-
-    // {javascript} 
-
+  return ( 
     <>
-      {/* <Navbar title="TextUtils" aboutText="About TextUtils"/> */}
-      {/* <Router> */}
-
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} changeMode={changeMode} aboutText="About"/>
-        {/* <Navbar/> */}
         <Alert alert={alert} />
         <div className="container my-4">
-          {/* <Switch> */}
-            {/* React uses partial matching (so use exact)
-             users --> Component 1
-            users/home/ --> Component 2 */}
-            {/* <Route exact path="/about">
-              <About />
-            </Route>
-            <Route exact path="/"> */}
               <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} btnColor={btnColor} />
-            {/* </Route>
-          </Switch> */}
-          {/* <About /> */}
         </div>
-      {/* </Router> */}
     </>
 
   );
