@@ -12,8 +12,8 @@
 /build
 
 
-/module1.mjs
-/module2.mjs
+module1.mjs
+module2.mjs
 
 # misc
 .DS_Store
