@@ -11,10 +11,6 @@
 # production
 /build
 
-
-module1.mjs
-module2.mjs
-
 # misc
 .DS_Store
 .env.local
